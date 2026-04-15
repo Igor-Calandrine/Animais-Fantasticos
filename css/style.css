@@ -1,0 +1,302 @@
+@charset "UTF-8";
+@import url(./scroll-bar.css);
+@import url(./style-start.css);
+@import url(./js-style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.htmlMaior {
+    font-size: 150%;
+}
+
+body {
+    padding-bottom: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------- */
+
+body {
+    background-color: #FAF6ED;
+}
+
+nav, main, aside, footer {
+    margin-top: 40px;
+    margin-left: 25%;
+}
+
+nav ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    color: rgb(66, 66, 66);
+    background-color: #FFBB55;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+nav a {
+    padding: 10px;
+}
+
+main {
+    position: relative;
+}
+
+main h1, aside h2 {
+    font-size: 8em;
+    margin-top: 30px;
+    margin-left: -150px;
+    font-weight: normal;
+}
+
+.animais_descrição {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 350px auto;
+    gap: 40px;
+}
+
+.animais {
+    height: 440px;
+    overflow-y: auto;
+    object-fit: cover;
+    position: sticky;
+    top:25%;
+}
+
+.animais img {
+    width: 100%;
+}
+
+.descrição {
+    padding-right: 20px;
+}
+
+.descrição h2 {
+    font-size: 1.2rem;
+    text-indent: 50px;
+    letter-spacing: 1.5px;
+    position: relative;  
+    color: #EE5544; 
+}
+
+.descrição h2:not(:first-child) {
+    margin-top: 60px;
+}
+
+.descrição h2::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    background-color: #FFBB55;
+    position: absolute;
+    left: 0px;
+    top: 7px;
+    transition: 0.5s;
+}
+
+.descrição:hover h2::before {
+    background-color: #ff9428;
+}
+
+.descrição p {
+    margin-top: 20px;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.1px;
+    color: rgb(25, 25, 25);
+    max-width: 45lvh;
+    text-align: justify;
+}
+
+aside:hover .pergunta::before{
+    background-color: #ff9428;
+}
+
+aside h2 {
+    margin-top: 80px;
+}
+
+aside p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+aside .pergunta:first-of-type{
+    margin-top: 60px;
+}
+
+
+aside .pergunta {
+    color: #EE5544;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 1.15px;
+    position: relative;
+}
+
+aside .pergunta:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: #FFBB55;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    transition: 0.5s;
+}
+
+aside:hover .pergunta::before{
+    background-color: #ff9428;
+}
+
+aside p {
+    max-width: 40lh;
+    margin-top: 10px;
+    color: rgb(25, 25, 25);
+    font-size: 1.125rem;
+}
+
+.mapa-endereço {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: minmax(200px, 400px) 1fr;
+    gap: 60px;
+}
+
+.mapa img{
+    max-width: 100%;;
+}
+
+.mapa-endereço ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: rgb(66, 66, 66);
+    display: grid;
+    gap: 20px;
+}
+
+.mapa-endereço li {
+    position: relative;
+    cursor: pointer;
+}
+
+.mapa-endereço li::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 10px;
+    background-color: #FFBB55;
+    position: absolute;
+    left: -25px;
+    top: 6px;
+    transition: 0.5s;
+}
+
+.endereço li:hover::before {
+    background-color: #ff9428;
+}
+
+footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    color: rgb(66, 66, 66);
+    background-color: #FFBB55;
+    padding: 25px;
+}
+
+@media (max-width:1000px) {
+
+    body {
+    padding-bottom: 0px;
+}
+
+    nav, main, aside, footer {
+    margin-top: 0px;
+    margin-left: 0;
+}
+
+    main, aside {
+        padding: 0 40px;
+    }
+
+    main h1, aside h2 {
+        margin: 40px 0px;
+        font-size: 5em;
+}
+
+    .animais_descrição {
+       grid-template-columns: auto auto; 
+    }
+
+    aside .pergunta:first-of-type{
+    margin-top: 40px;
+}
+
+    aside p {
+    margin-left: 30px;
+}
+
+    footer {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:600px) {
+    main, aside {
+        padding: 0 20px;
+    }
+
+    main h1, aside h2 {
+        margin: 40px 0px;
+        font-size: 3.5em;
+    }
+
+    .mapa-endereço {
+        grid-template-columns: 1fr;
+        gap: 60px;
+}
+
+    .mapa {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .endereço {
+    margin-left: 50px;
+}
+}
+
+
+
+
+
+
+
+

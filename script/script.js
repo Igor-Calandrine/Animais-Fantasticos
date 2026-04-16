@@ -1,3 +1,8 @@
+import AbrirSubmenu from "./abrir-submenu.js"
+
+const perguntas = new AbrirSubmenu(".pergunta")
+perguntas.mostrarResposta()
+
 const animaisImg = document.querySelectorAll(".js-animais img")
 const animaisText = document.querySelectorAll(".js-descrição div")
 
@@ -17,21 +22,6 @@ function animaisTexto() {
          })
       })
    }
-}
-
-function perguntasFaqc() {
-   const perguntasFaq = document.querySelectorAll(".js-pergunta")
-
-   perguntasFaq.forEach((pergunta) => {
-      pergunta.nextElementSibling.classList.add("js-resposta-desativa")
-
-      pergunta.addEventListener("click", () => {
-         pergunta.classList.toggle("js-desativa-p")
-         pergunta.nextElementSibling.classList.toggle("js-resposta-desativa")
-      })
-   })
-   perguntasFaq[0].nextElementSibling.classList.remove("js-resposta-desativa")
-   perguntasFaq[0].classList.add("js-desativa-p")
 }
 
 function TituloAnimadoScroll() {
@@ -61,5 +51,4 @@ function TituloAnimadoScroll() {
 }
 
 animaisTexto()
-perguntasFaqc()
 TituloAnimadoScroll()

@@ -1,0 +1,13 @@
+.resposta {
+   opacity: 1;
+   height: 50px;
+   transition: 0.8s;
+}
+
+.resposta.desativo {
+   overflow: hidden;
+   height: 0px;
+   opacity: 0;
+}
+
+

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url(./scroll-bar.css);
 @import url(./style-start.css);
-@import url(./js-show-submenu.css);
 
 * {
     margin: 0;

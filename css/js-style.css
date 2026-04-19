@@ -1,17 +1,3 @@
-.js-desativo {
-    display: none;
-}
-
-aside .pergunta.js-desativa-p::after {
-    transform: rotate(180deg);
-}
-
-.js-resposta-desativa {
-    max-height: 0 !important;
-    overflow: hidden !important;
-    opacity: 0 !important;
-}
-
 .js-scrollAnimação {
     transform: translate3d(-100px, 0, 0) !important;
     opacity: 0 !important;

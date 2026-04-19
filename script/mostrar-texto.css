@@ -1,0 +1,19 @@
+.texto-desativo {
+   display: none;
+}
+
+.entrada-textos {
+   position: relative;
+   animation: entradaTextos 1s ease forwards;
+}
+
+@keyframes entradaTextos{
+   from {
+      opacity: 0;
+      left: 80px;
+   }
+   to {
+      opacity: 1;
+      left: 0px;
+   }
+}

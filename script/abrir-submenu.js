@@ -14,9 +14,6 @@ export default class AbrirSubmenu {
    }
 
    mostrarResposta() {
-      this.esconderSubmenu()
-      this.mostrarPrimeiroSubmenu()
-
       this.elemento.forEach((pergunta) => {
          pergunta.addEventListener("click", (event) => {
             const pergunta = event.target
@@ -25,5 +22,11 @@ export default class AbrirSubmenu {
             resposta.classList.toggle("desativo")
          })
       })
+   }
+
+   iniciar() {
+      this.esconderSubmenu()
+      this.mostrarPrimeiroSubmenu()
+      this.mostrarResposta()
    }
 }

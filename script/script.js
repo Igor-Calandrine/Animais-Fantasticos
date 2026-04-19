@@ -1,28 +1,11 @@
 import AbrirSubmenu from "./abrir-submenu.js"
+import MostrarTexto from "./mostrar-texto.js"
 
 const perguntas = new AbrirSubmenu(".pergunta")
-perguntas.mostrarResposta()
+const textoAnimais = new MostrarTexto("[data-textos] div", "[data-animais] div")
 
-const animaisImg = document.querySelectorAll(".js-animais img")
-const animaisText = document.querySelectorAll(".js-descrição div")
-
-function animaisTexto() {
-   animaisText.forEach((animalText) => {
-      animalText.classList.add("js-desativo")
-   })
-   animaisText[0].classList.toggle("js-desativo")
-
-   if (animaisImg.length && animaisText.length) {
-      animaisImg.forEach((animal, index) => {
-         animal.addEventListener("click", () => {
-            animaisText.forEach((animalText) => {
-               animalText.classList.add("js-desativo")
-            })
-            animaisText[index].classList.toggle("js-desativo")
-         })
-      })
-   }
-}
+perguntas.iniciar()
+textoAnimais.iniciar()
 
 function TituloAnimadoScroll() {
    const alturaTela = window.innerHeight
@@ -50,5 +33,4 @@ function TituloAnimadoScroll() {
    })
 }
 
-animaisTexto()
 TituloAnimadoScroll()

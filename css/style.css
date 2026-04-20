@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(./scroll-bar.css);
-@import url(./style-start.css);
+@import url(./style-global.css);
 
 * {
     margin: 0;

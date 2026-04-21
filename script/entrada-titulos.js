@@ -1,6 +1,7 @@
 /*Para o funcionamento é importante acrescentar data-titulos onde se deseja que se tenha uma entrada animada
 
-Pode-se modificar a posição de entrada ajustando a variável posição em #posicaoItemTela (posicao)*/ 
+Pode-se modificar a posição de entrada ajustando a variável posição em #posicaoItemTela (posicao)*/
+ 
 export default class TitulosAnimados {
    constructor (item) {
       this.item = document.querySelectorAll(item)

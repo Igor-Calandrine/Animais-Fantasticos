@@ -1,39 +1,14 @@
 import AbrirSubmenu from "./abrir-submenu.js"
 import MostrarTexto from "./mostrar-texto.js"
 import TitulosAnimados from "./entrada-titulos.js"
+import AnimaNumeros from "./anima-numeros.js"
 
 const perguntas = new AbrirSubmenu(".pergunta")
 const textoAnimais = new MostrarTexto("[data-textos] div", "[data-animais] div")
 const titulosAnimados = new TitulosAnimados("[data-titulos]")
+const animaNumeros = new AnimaNumeros("[data-numeros]")
 
 perguntas.iniciar()
 textoAnimais.iniciar()
 titulosAnimados.iniciar()
-
-// function TituloAnimadoScroll() {
-//    const alturaTela = window.innerHeight
-//    const tituloAnima = document.querySelectorAll(".js-scrollAnima")
-
-//    tituloAnima.forEach((item) => {
-//       item.classList.add("js-scrollAnimação")
-//    })
-//    tituloAnima[0].classList.remove("js-scrollAnimação")
-
-//    window.addEventListener("scroll", () => {
-//       tituloAnima.forEach((item) => {
-//          if (
-//             item.getBoundingClientRect().bottom > 0 &&
-//             item.getBoundingClientRect().top < alturaTela * 0.85
-//          ) {
-//             item.classList.remove("js-scrollAnimação")
-//          } else if (
-//             item.getBoundingClientRect().bottom < 0 ||
-//             item.getBoundingClientRect().top > alturaTela * 0.7
-//          ) {
-//             item.classList.add("js-scrollAnimação")
-//          }
-//       })
-//    })
-// }
-
-// TituloAnimadoScroll()
+animaNumeros.iniciar()

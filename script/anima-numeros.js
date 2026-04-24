@@ -11,9 +11,10 @@ export default class AnimaNumeros {
       this.item = Array.from(document.querySelectorAll(item))
       this.numeroMax = []
       this.incremento = []
-      this.flagNumeros = []
+      this.flagNumeros = this.item.map(() => false)
    }
 
+   //Salva o números que devem ser atingidos
    numerosMaximos() {
       const listaNumeros = this.item.map((item) => {
          return parseInt(item.textContent)
@@ -22,12 +23,14 @@ export default class AnimaNumeros {
       this.numeroMax = listaNumeros
    }
 
+   //Zeros o texto com os números
    numerosZerados() {
       this.item.forEach((item) => {
          item.textContent = 0
       })
    }
 
+   //Divide o número em partes iguais para ser incrementado
    numerosIncremento(valor) {
       const listaIncremento = this.numeroMax.map((item) => {
          return Math.floor(item / valor)
@@ -35,6 +38,7 @@ export default class AnimaNumeros {
       this.incremento = listaIncremento
    }
 
+   //Não permite abrir o incremento de forma repetitiva, realiza a animação em intervalos do seu #valor
    numerosAnimados(valor) {
       this.item.forEach((item, index) => {
          if (this.flagNumeros[index] && !item.classList.contains("animado")) {
@@ -55,9 +59,8 @@ export default class AnimaNumeros {
       })
    }
 
+   //Cria um obervador para ativar um flag e depois ativar a animação
    observadorNumero() {
-      this.flagNumeros = this.item.map(() => false)
-
       const observador = new IntersectionObserver(
          (entradas) => {
             entradas.forEach((item) => {

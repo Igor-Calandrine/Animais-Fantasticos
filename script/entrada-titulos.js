@@ -7,16 +7,19 @@ export default class TitulosAnimados {
       this.item = document.querySelectorAll(item)
    }
 
+   //Atualiza dados da altura da Tela
    alturaTelaTela () {
       const alturaTela = window.innerHeight
       return alturaTela
    }
 
+   //Mostra o primeiro título do topo da página
    mostrarPrimeiroTitulo () {
       this.item[0].dataset.titulos = "animados"
    }
 
-   posicaoItemTela (posicao) {
+   //Anima na posicao desejada
+   posicaoAnimacao (posicao) {
       window.addEventListener("scroll", () => {
          this.item.forEach((item) => {
             const topItem = item.getBoundingClientRect().top
@@ -33,7 +36,7 @@ export default class TitulosAnimados {
 
    iniciar() {
       this.mostrarPrimeiroTitulo()
-      this.posicaoItemTela(0.85)
+      this.posicaoAnimacao(0.85)
    }
     
 }

@@ -32,7 +32,7 @@ main {
 }
 
 main h1, aside h2 {
-    font-size: 8em;
+    font-size: 5.5em;
     margin-top: 30px;
     margin-left: -150px;
     font-weight: normal;
@@ -152,16 +152,19 @@ aside .numeros {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    
 }
 
-aside .numeros p {
+.numeros p {
     font-size: 1.75rem;
 }
 
-aside .numeros span {
+.numeros span {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     font-size: 2.5rem;
+    display: block;
+    text-align: left;
     color: #EE5544;
     margin-top: 12px;
 }
@@ -241,11 +244,20 @@ footer p {
     }
 
     aside .pergunta:first-of-type{
-    margin-top: 40px;
+        margin-top: 40px;
 }
 
     aside p {
-    margin-left: 30px;
+        margin-left: 30px;
+}
+
+    .numeros {
+        margin-left: 30px;
+    }
+
+    .numeros p {
+        margin-left: 0;
+        text-align: left !important; 
 }
 
     footer {

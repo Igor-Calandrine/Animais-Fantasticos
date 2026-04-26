@@ -1,0 +1,14 @@
+.funcionamento {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #EE5544;
+    border: 2px solid rgba(0, 0, 0, 0.571);
+    position: relative;
+    top: 2px;
+}
+
+.funcionamento.ativo {
+    background-color: #44ee82;
+}
